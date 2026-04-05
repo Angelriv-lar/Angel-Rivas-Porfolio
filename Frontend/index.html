@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Angel Rivas — Computer Science portfolio showcasing projects, experience, and contact information."
+    />
+    <title>Angel Rivas • Portfolio</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Desktop Nav -->
+      <nav id="desktop-nav" aria-label="Primary">
+        <a href="#profile" class="logo" aria-label="Go to top">Angel Rivas</a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Nav -->
+      <nav id="hamburger-nav" aria-label="Primary (mobile)">
+        <a href="#profile" class="logo" aria-label="Go to top">Angel Rivas</a>
+
+        <div class="hamburger-menu">
+          <button
+            class="hamburger-icon"
+            id="hamburger-button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            type="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul id="mobile-menu" class="menu-links" role="list">
+            <li><a href="#about" data-close-menu>About</a></li>
+            <li><a href="#skills" data-close-menu>Experience</a></li>
+            <li><a href="#projects" data-close-menu>Projects</a></li>
+            <li><a href="#contact" data-close-menu>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- BUSINESS CARD (TOP OF PAGE) -->
+      <section id="business-card" aria-labelledby="bizcard-title">
+        <p class="section__text__p1">Hover to flip</p>
+
+        <div class="biz-scene">
+          <div class="biz-card">
+            <!-- FRONT -->
+            <div class="biz-face biz-front">
+              <img class="biz-avatar" src="./logos/profile_.HEIC" alt="Headshot of Angel Rivas" />
+              <h3 class="biz-name">Angel Rivas</h3>
+            </div>
+
+            <!-- BACK -->
+            <div class="biz-face biz-back">
+              <h3 class="biz-back-title">Let’s build your site</h3>
+              <p class="biz-bio">
+                Data analyst skilled in SQL, Python, and uncovering insights from complex datasets. I turn raw data into clear insights that help businesses make smarter decisions.
+              </p>
+
+              <div class="biz-contact">
+                <p><strong>Email:</strong> angelrvsl11@gmail.com</p>
+                <br>
+                <a class="biz-pill" href="https://linkedin.com/in/angel-rivas-ba0842382" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROFILE -->
+      <section id="profile" aria-labelledby="profile-title">
+
+        <div class="section__text">
+          <div class="btn-container">
+            <a class="btn btn-color-2" href="RivasAngel_Resume-Data Analyst.pdf" download>Download CV</a>
+            <button class="btn btn-color-1" data-jump-contact type="button">Contact Info</button>
+          </div>
+          <br/>
+
+          <div class="social-links">
+            <a
+              class="icon-link"
+              href="https://github.com/Angelriv-lar"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my GitHub profile (opens in a new tab)"
+            >
+              <img src="./logos/github.png" alt="GitHub" class="icon" />
+            </a>
+
+            <a
+              class="icon-link"
+              href="https://www.linkedin.com/in/angel-rivas-ba0842382"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my Linkedin profile (opens in a new tab)"
+            >
+              <img src="./logos/Linkedin.png" alt="LinkedIn" class="icon" />
+            </a>
+
+            <a
+              class="icon-link"
+              href="mailto:angelrvsl11@gmail.com"
+              aria-label="Email me"
+            >
+              <img src="./logos/email.png" alt="Gmail" class="icon" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Summary -->
+      <section>
+        <div id="about" class="summary">
+          <div class="details-container summary-card">
+            <p>
+            Computer Science student (B.S., May 2026) with experience in data analysis, SQL, and building data-driven
+            applications. Skilled in Python (Pandas), data manipulation, and extracting insights from structured datasets. Strong
+            interest in applying analytics and statistical thinking to real-world business and operational problems
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" aria-labelledby="about-title" class="reveal">
+        <h2 id="about-title" class="title">Education</h2>
+
+        <div class="school-banner" aria-label="Education summary">
+          <img src="./logos/CSUDH.png" alt="CSUDH logo" />
+          <p class="section__text__p1">3.6 GPA</p>
+        </div>
+      </section>
+
+      <!-- SKILLS / EXPERIENCE -->
+      <section id="skills" aria-labelledby="skills-title" class="reveal">
+        <h2 id="skills-title" class="title">Technical Skills</h2>
+
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <div class="article-container">
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>Programming & Data</h3>
+                    <p>Python (Pandas), SQL (MySQL, data querying, joins, basic data analysis), Java</p>
+                  </div>
+                </article>
+
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>Data Analyst</h3>
+                    <p>Data cleaning, data manipulation, exploratory analysis</p>
+                  </div>
+                </article>
+
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>Visualization & Tools</h3>
+                    <p>Microsoft Excel (Certified), PowerPoint, Word</p>
+                  </div>
+                </article>
+
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, React</p>
+                  </div>
+                </article>
+
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>Backend</h3>
+                    <p>Spring Boot, REST APIs, JPA/Hibernate</p>
+                  </div>
+                </article>
+
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>Tools</h3>
+                    <p>Git, GitHub, VS Code, Netlify</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" aria-labelledby="projects-title" class="reveal">
+        <p class="section__text__p1">Explore My</p>
+        <h2 id="projects-title" class="title">Projects</h2>
+
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <div class="article-container">
+
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>
+                      Data Analysis | Python (Pandas), Excel
+                      <br />
+                    </h3>
+                    <p>
+                      ● Analyzed dataset using Python (Pandas) to identify trends and patterns in sales data. <br>
+                      ● Cleaned and transformed raw data by handling missing values and formatting inconsistencies. <br>
+                      ● Used group-by operations and aggregations to extract insights from the dataset. <br>
+                      ● Created visualizations (charts/graphs) to communicate findings clearly.
+                    </p>
+                  </div>
+                </article>
+
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>
+                      ManagePro — Inventory Management Web App | Java, Spring Boot, REST APIs, Spring Security, SQL
+                      <br />
+                      <a
+                        class="icon-link"
+                        href="https://github.com/Angelriv-lar/ManagePro.git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src="./logos/github.png" alt="GitHub" class="icon" />
+                      </a>
+                    </h3>
+                    <p>
+                      ● Developed a data-driven inventory management system to track and organize product data. <br>
+                      ● Queried and analyzed structured datasets using SQL to support application functionality and data retrieval. <br>
+                      ● Designed relational data models to improve the efficiency and accuracy of stored data. <br>
+                      ● Built backend APIs enabling dynamic data flow and real-time updates.
+                    </p>
+                    <video autoplay muted loop playsinline width="640" height="480">
+                      <source src="./Demos/ManagePro-Demo.mov" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </article>
+                
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>
+                      Punch And Flow Boxing & Fitness (Client Website) | HTML, CSS, JavaScript
+                      <br />
+                      <a
+                        class="icon-link"
+                        href="https://github.com/Angelriv-lar/Punch-And-Flow-Boxing---Fitness.git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src="./logos/github.png" alt="GitHub" class="icon" />
+                      </a>
+                    </h3>
+                    <p>
+                    ● Developed a responsive web application with dynamic user interactions. <br>
+                    ● Integrated APIs and optimized frontend performance for improved user experience.
+                    <video autoplay muted loop playsinline width="640" height="480">
+                      <source src="./Demos/PNF-Demo.mov" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </article>
+
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>
+                      Andy's Auto Mech & Body Repair (Client Website) | HTML, CSS, JavaScript
+                      <br />
+                      <a
+                        class="icon-link"
+                        href="https://github.com/Angelriv-lar/Andy-s-Auto-Mecb-Body-Repair.git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src="./logos/github.png" alt="GitHub" class="icon" />
+                      </a>
+                    </h3>
+                    <p>
+                      ● Built and deployed a mobile-friendly website for a local automotive business. <br>
+                      ● Improved accessibility and usability for customer engagement.
+                    </p>
+                    <video autoplay muted loop playsinline width="640" height="480">
+                      <source src="./Demos/Andy's-Demo.mov" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK EXPERIENCE -->
+      <section id="experience" aria-labelledby="work-title" class="reveal">
+        <h2 id="work-title" class="title">Work Experience</h2>
+
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <div class="article-container">
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>Barista — Tierra Mia (Sept 2022 - Dec 2025)</h3>
+                    <p>Served ~300 customers per shift in a high-volume cafe; trained new team members and supported daily operations.</p>
+                  </div>
+                </article>
+
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>Package Handler — Amazon (Nov 2020 - May 2022)</h3>
+                    <p>Processed 200+ packages per hour with 99%+ accuracy, improved workflow efficiency, and excelled in a high-pressure environment.</p>
+                  </div>
+                </article>
+
+                <article>
+                  <img src="./logos/checkmark.png" alt="" class="icon" aria-hidden="true" />
+                  <div>
+                    <h3>Cashier & Stocker — Best Market (Sept 2019 - Nov 2020)</h3>
+                    <p>Managed transactions and inventory for 300+ products daily while providing friendly, efficient customer service.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" aria-labelledby="contact-title" class="reveal">
+        <p class="section__text__p1">Get in Touch</p>
+        <h2 id="contact-title" class="title">Contact Me</h2>
+
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img src="./logos/email.png" alt="" class="icon contact-icon email-icon" aria-hidden="true" />
+            <p><a href="mailto:angelrvsl11@gmail.com">angelrvsl11@gmail.com</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <nav aria-label="Footer">
+        <div>
+          <ul class="nav-links" role="list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <p>Copyright &#169; <span id="year">2026</span> Angel Rivas. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./Script.js" defer></script>
+    <script src="./contact.js"defer></script>
+  </body>
+</html>

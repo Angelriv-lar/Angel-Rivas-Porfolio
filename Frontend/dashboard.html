@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Portal • Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav id="desktop-nav" aria-label="Primary">
+      <a href="./index.html" class="logo">Angel Rivas</a>
+      <ul class="nav-links" role="list">
+        <li><a href="./index.html#projects">Projects</a></li>
+        <li><a href="./index.html#contact">Contact</a></li>
+        <li><a class="nav-cta" href="./dashboard.html">Client Portal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dash-wrap">
+    <h1 class="title">Client Portal</h1>
+    <p class="section__text__p1">Create an account to request a website and view demos</p>
+
+    <!-- AUTH -->
+    <section class="dash-card" id="auth-card">
+      <div class="portal-tabs" role="tablist" aria-label="Portal tabs">
+        <button class="portal-tab is-active" type="button" data-tab="signup">Create Account</button>
+        <button class="portal-tab" type="button" data-tab="login">Login</button>
+      </div>
+
+      <div class="portal-grid">
+        <form id="signup-form" class="portal-form" data-pane="signup">
+          <label>
+            Name
+            <input id="su-name" type="text" required />
+          </label>
+          <label>
+            Email
+            <input id="su-email" type="email" required />
+          </label>
+          <label>
+            Password
+            <input id="su-pass" type="password" minlength="6" required />
+          </label>
+          <button class="btn btn-color-1" type="submit">Create Account</button>
+          <p class="portal-msg" id="signup-msg" aria-live="polite"></p>
+        </form>
+
+        <form id="login-form" class="portal-form" data-pane="login" hidden>
+          <label>
+            Email
+            <input id="li-email" type="email" required />
+          </label>
+          <label>
+            Password
+            <input id="li-pass" type="password" required />
+          </label>
+          <button class="btn btn-color-1" type="submit">Login</button>
+          <p class="portal-msg" id="login-msg" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="dash-card" id="dashboard-card" hidden>
+      <div class="dash-top">
+        <div>
+          <p class="dash-kicker">Signed in as</p>
+          <h2 id="dash-name">Client</h2>
+          <p class="dash-muted" id="dash-email"></p>
+        </div>
+        <button class="btn btn-color-2" id="logout" type="button">Logout</button>
+      </div>
+    </section>
+
+    <section class="dash-card" id="request-card" hidden>
+      <h3>Request a Website</h3>
+      <form id="request-form" class="portal-form">
+        <label>
+          Business / Project Name
+          <input id="rq-project" type="text" required />
+        </label>
+
+        <label>
+          Type
+          <select id="rq-type" required>
+            <option value="" disabled selected>Select one</option>
+            <option>Landing Page</option>
+            <option>Business Website</option>
+            <option>E-Commerce</option>
+            <option>Portfolio</option>
+            <option>Web App</option>
+          </select>
+        </label>
+
+        <label>
+          Notes / Features
+          <textarea id="rq-notes" rows="4" placeholder="Pages, booking, payments, branding, etc." required></textarea>
+        </label>
+
+        <button class="btn btn-color-1" type="submit">Submit Request</button>
+        <p class="portal-msg" id="request-msg" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="dash-card" id="demos-card" hidden>
+      <h3>Live Demos</h3>
+      <p class="dash-muted">Replace these with your real deployed demo links.</p>
+
+      <div class="demo-grid">
+        <a class="demo-card" href="https://example.com" target="_blank" rel="noopener noreferrer">
+          <div class="demo-title">Demo 1 — Client Site</div>
+          <div class="demo-sub">Open live preview</div>
+        </a>
+
+        <a class="demo-card" href="https://example.com" target="_blank" rel="noopener noreferrer">
+          <div class="demo-title">Demo 2 — Booking Flow</div>
+          <div class="demo-sub">Open live preview</div>
+        </a>
+
+        <a class="demo-card" href="https://example.com" target="_blank" rel="noopener noreferrer">
+          <div class="demo-title">Demo 3 — Dashboard UI</div>
+          <div class="demo-sub">Open live preview</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="dash-card" id="requests-card" hidden>
+        <h3>Your Requests</h3>
+
+        <div class="portal-split">
+            <div>
+            <div class="requests-toolbar">
+                <input id="rq-search" type="search" placeholder="Search requests..." />
+                <button class="btn btn-color-2" id="rq-refresh" type="button">Refresh</button>
+            </div>
+
+            <div id="requests-list" class="requests-list"></div>
+            <p class="dash-muted" id="requests-empty" hidden>No requests yet. Submit one above.</p>
+            </div>
+
+            <div class="thread" id="thread" hidden>
+            <div class="thread-head">
+                <div>
+                <div class="dash-kicker">Request</div>
+                <h4 id="thread-title" style="margin:0;">—</h4>
+                <div class="thread-meta">
+                    <span id="thread-status" class="pill">—</span>
+                    <span class="dash-muted" id="thread-client"></span>
+                </div>
+                </div>
+                <button class="btn btn-color-2" id="thread-close" type="button">Close</button>
+            </div>
+
+            <div class="thread-body" id="thread-messages"></div>
+
+            <form id="msg-form" class="thread-form">
+                <textarea id="msg-body" rows="2" placeholder="Write a message..." required></textarea>
+                <button class="btn btn-color-1" type="submit">Send</button>
+            </form>
+
+            <p class="portal-msg" id="msg-msg" aria-live="polite"></p>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright &#169; <span id="year">2026</span> Angel Rivas. All Rights Reserved.</p>
+  </footer>
+
+  <script src="./dashboard.js" defer></script>
+</body>
+</html>
