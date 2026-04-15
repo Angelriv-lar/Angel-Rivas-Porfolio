@@ -372,7 +372,17 @@ footer .nav-links{
 }
 
 /* Flip */
-.biz-scene:hover .biz-card{ transform: rotateY(180deg); }
+/* Desktop hover still works */
+@media (hover: hover) {
+  .biz-scene:hover .biz-card {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Mobile tap */
+.biz-scene.flipped .biz-card {
+  transform: rotateY(180deg);
+}
 
 /* Faces */
 .biz-face{
@@ -659,3 +669,34 @@ footer .nav-links{
 }
 .dash-kicker{ margin:0; color:#6b7280; font-weight:700; letter-spacing:.02em; font-size:.9rem; }
 .dash-muted{ color:#6b7280; margin: 4px 0 0; }
+
+
+article {
+  overflow: hidden;
+}
+
+article > div {
+  width: 100%;
+  min-width: 0;
+}
+
+article video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+article h3,
+article p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  article {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
