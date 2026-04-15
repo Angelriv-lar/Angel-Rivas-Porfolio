@@ -65,6 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => io.observe(el));
   }
 
+
+  // ===== Business Card ======= //
+  const bizScene = document.querySelector(".biz-scene");
+  bizScene.addEventListener("click", () => {
+    bizScene.classList.toggle("flipped");
+  });
+  
   // ===== Contact form -> Django endpoint =====
   const form = document.getElementById("contact-form");
   const statusEl = document.getElementById("form-status");
